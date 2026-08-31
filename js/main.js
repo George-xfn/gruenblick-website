@@ -32,21 +32,19 @@
   var heroContent = document.getElementById('heroContent');
   var hero = document.querySelector('.hero');
 
-  function easeOutBack(t){
-    var c1 = 1.4, c3 = c1 + 1;
-    return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2);
+  function easeInOutSine(t){
+    return -(Math.cos(Math.PI * t) - 1) / 2;
   }
 
   function updateHero(){
     if (!hero) return;
     var h = hero.offsetHeight;
-    var threshold = Math.min(h * 0.55, 520);
+    var threshold = Math.min(h * 0.95, 680);
     var t = Math.max(0, Math.min(1, window.scrollY / threshold));
-    var eased = easeOutBack(t);
-    var opacity = Math.max(0, Math.min(1, t * 1.15));
-    var translate = 46 * (1 - eased);
-    var scale = 0.9 + 0.1 * eased;
-    heroContent.style.opacity = opacity;
+    var eased = easeInOutSine(t);
+    var translate = 34 * (1 - eased);
+    var scale = 0.96 + 0.04 * eased;
+    heroContent.style.opacity = eased;
     heroContent.style.transform = 'translateY(' + translate + 'px) scale(' + scale + ')';
   }
   if (reduceMotion){
