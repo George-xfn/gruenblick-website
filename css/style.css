@@ -1,5 +1,5 @@
 /* ==========================================================
-   GRÜNBLICK — Design System
+   GRÜNWERK — Design System
    ========================================================== */
 
 :root{
@@ -204,9 +204,9 @@ h1,h2,h3,h4{font-family:var(--font-head);color:var(--dark-green);line-height:1.1
 
 .hero-content{position:relative;z-index:2;text-align:center;color:#fff;padding-top:70px}
 .eyebrow{
-  display:inline-block;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;
-  padding:.5rem 1.1rem;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);
-  backdrop-filter:blur(6px);margin-bottom:1.6rem;
+  display:inline-block;font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:clamp(1.05rem,2.6vw,1.5rem);
+  padding:.7rem 1.8rem;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);
+  backdrop-filter:blur(6px);margin-bottom:1.8rem;
 }
 .hero h1{
   font-size:clamp(2.6rem,6.5vw,5rem);color:#fff;text-shadow:0 10px 40px rgba(0,0,0,.25);
