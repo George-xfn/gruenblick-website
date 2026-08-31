@@ -69,24 +69,51 @@
     });
   }
 
-  /* ---------------- SCROLL REVEAL ---------------- */
-  var revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if (entry.isIntersecting){
-          var el = entry.target;
-          var siblingIndex = Array.prototype.indexOf.call(el.parentElement.children, el);
-          var delay = Math.min(siblingIndex, 5) * 90;
-          el.style.transitionDelay = reduceMotion ? '0ms' : delay + 'ms';
-          el.classList.add('is-visible');
-          io.unobserve(el);
-        }
-      });
-    }, { threshold:0.15, rootMargin:'0px 0px -60px 0px' });
-    revealEls.forEach(function(el){ io.observe(el); });
-  } else {
+  /* ---------------- SCROLL REVEAL (an Scroll-Fortschritt gekoppelt) ---------------- */
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+
+  revealEls.forEach(function(el){
+    var siblings = Array.prototype.filter.call(el.parentElement.children, function(c){
+      return c.classList.contains('reveal');
+    });
+    var idx = siblings.indexOf(el);
+    el._revealOffset = (idx % 3) * 60;
+    el._settled = false;
+  });
+
+  function easeOutSine(t){ return Math.sin(t * Math.PI / 2); }
+
+  function updateReveals(){
+    var vh = window.innerHeight;
+    var startLine = vh * 0.94;
+    var endLine = vh * 0.5;
+    revealEls.forEach(function(el){
+      if (el._settled) return;
+      var top = el.getBoundingClientRect().top + el._revealOffset;
+      var progress = (startLine - top) / (startLine - endLine);
+      progress = Math.max(0, Math.min(1, progress));
+      var eased = easeOutSine(progress);
+
+      if (progress >= 1){
+        el._settled = true;
+        el.classList.add('is-visible');
+        el.style.opacity = '';
+        el.style.transform = '';
+        el.style.filter = '';
+        return;
+      }
+      el.style.opacity = eased;
+      el.style.transform = 'translateY(' + (26 * (1 - eased)) + 'px) scale(' + (0.985 + 0.015 * eased) + ')';
+      el.style.filter = 'blur(' + (6 * (1 - eased)) + 'px)';
+    });
+  }
+
+  if (reduceMotion){
     revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  } else {
+    updateReveals();
+    window.addEventListener('scroll', function(){ requestAnimationFrame(updateReveals); }, { passive:true });
+    window.addEventListener('resize', function(){ requestAnimationFrame(updateReveals); });
   }
 
   /* ---------------- TILT CARDS ---------------- */
