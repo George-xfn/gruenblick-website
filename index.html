@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grünblick – Ihr Garten. Unser Grünblick.</title>
+<meta name="description" content="Grünblick ist Ihr Premium-Gartenservice: Gartenpflege, Rasenpflege, Heckenschnitt, Baumpflege und Gartengestaltung – professionell, zuverlässig, mit Leidenschaft.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav-inner container">
+    <a href="#start" class="logo" aria-label="Grünblick Start">
+      <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-mark">
+        <path d="M32 6C18 6 8 18 8 32c0 3 .4 5.8 1.1 8.4C13 34 20 28 32 28c-10 4-16 11-19.6 18.6C16.4 54.7 23.6 58 32 58c14.9 0 27-11.6 27-27C59 17.5 47.4 6 32 6Z" fill="url(#leafGrad)"/>
+        <path d="M20 40C26 26 32 16 45 10" stroke="#eafff0" stroke-width="2" stroke-linecap="round" opacity=".55"/>
+        <circle cx="41" cy="21" r="4.4" fill="#0e2417"/>
+        <circle cx="42.3" cy="19.7" r="1.4" fill="#eafff0"/>
+        <defs>
+          <linearGradient id="leafGrad" x1="8" y1="6" x2="59" y2="58" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#3c7a4e"/>
+            <stop offset="1" stop-color="#173a24"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="logo-text">Grünblick</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#start">Start</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#pakete">Pakete</a>
+      <a href="#vorher-nachher">Vorher / Nachher</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a href="#termin" class="btn btn-primary btn-nav">Termin buchen</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#start">Start</a>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#pakete">Pakete</a>
+    <a href="#vorher-nachher">Vorher / Nachher</a>
+    <a href="#ueber-uns">Über uns</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#termin" class="btn btn-primary" style="margin-top:.5rem">Termin buchen</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="start">
+  <div class="hero-scene" id="heroScene" aria-hidden="true">
+    <div class="sky"></div>
+    <div class="sun-glow"></div>
+    <svg class="hills hills-back" viewBox="0 0 1440 400" preserveAspectRatio="none"><path d="M0,220 C300,120 500,260 760,200 C1000,150 1200,240 1440,180 L1440,400 L0,400 Z"/></svg>
+    <svg class="hills hills-mid" viewBox="0 0 1440 400" preserveAspectRatio="none"><path d="M0,260 C260,180 480,300 740,240 C980,190 1220,290 1440,230 L1440,400 L0,400 Z"/></svg>
+
+    <div class="floaty leaf leaf-1">🍃</div>
+    <div class="floaty leaf leaf-2">🍃</div>
+    <div class="floaty leaf leaf-3">🌿</div>
+    <div class="floaty leaf leaf-4">🍃</div>
+    <div class="floaty leaf leaf-5">🌿</div>
+
+    <div class="tree tree-1"></div>
+    <div class="tree tree-2"></div>
+    <div class="tree tree-3"></div>
+
+    <div class="bed bed-1"><span class="flower">🌸</span><span class="flower">🌷</span><span class="flower">🌼</span><span class="flower">🌸</span><span class="flower">🌷</span></div>
+    <div class="bed bed-2"><span class="flower">🌼</span><span class="flower">🌸</span><span class="flower">🌷</span><span class="flower">🌼</span></div>
+
+    <div class="terrace"></div>
+    <div class="path"></div>
+    <svg class="hills hills-front" viewBox="0 0 1440 300" preserveAspectRatio="none"><path d="M0,180 C320,120 520,220 760,170 C1020,120 1240,210 1440,160 L1440,300 L0,300 Z"/></svg>
+  </div>
+
+  <div class="hero-content container" id="heroContent">
+    <p class="eyebrow">Premium Gartenservice</p>
+    <h1>Ihr Garten.<br><span>Unser Grünblick.</span></h1>
+    <p class="hero-sub">Wir verwandeln Ihren Garten in eine gepflegte Wohlfühloase.</p>
+    <div class="hero-actions">
+      <a href="#termin" class="btn btn-primary btn-lg">Termin vereinbaren</a>
+      <a href="#leistungen" class="btn btn-ghost btn-lg">Unsere Leistungen</a>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true"><span></span></div>
+</section>
+
+<!-- ================= LEISTUNGEN ================= -->
+<section class="section" id="leistungen">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="kicker">Leistungen</p>
+      <h2>Was wir für Ihren Garten tun können</h2>
+      <p class="section-sub">Professionelle Gartenpflege für kleine und große Außenbereiche.</p>
+    </div>
+
+    <div class="cards-grid" id="serviceGrid">
+
+      <article class="tilt-card reveal" data-icon="🌱">
+        <div class="tilt-card-inner">
+          <div class="card-media grad-1"><span class="card-icon">🌱</span></div>
+          <div class="card-body">
+            <h3>Gartenpflege</h3>
+            <p>Regelmäßige Pflege für einen gesunden und gepflegten Garten.</p>
+            <ul>
+              <li>Beetpflege</li>
+              <li>Unkrautentfernung</li>
+              <li>Pflanzenpflege</li>
+              <li>Allgemeine Gartenpflege</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="tilt-card reveal" data-icon="🌿">
+        <div class="tilt-card-inner">
+          <div class="card-media grad-2"><span class="card-icon">🌾</span></div>
+          <div class="card-body">
+            <h3>Rasenpflege</h3>
+            <p>Ein satter, gleichmäßiger Rasen als grüne Basis Ihres Gartens.</p>
+            <ul>
+              <li>Rasen mähen</li>
+              <li>Vertikutieren</li>
+              <li>Rasenkanten</li>
+              <li>Rasenpflege</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="tilt-card reveal" data-icon="✂️">
+        <div class="tilt-card-inner">
+          <div class="card-media grad-3"><span class="card-icon">✂️</span></div>
+          <div class="card-body">
+            <h3>Hecken &amp; Sträucher</h3>
+            <p>Klare Formen und gesunde Sträucher für ein gepflegtes Erscheinungsbild.</p>
+            <ul>
+              <li>Heckenschnitt</li>
+              <li>Strauchschnitt</li>
+              <li>Formschnitt</li>
+              <li>Pflege</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="tilt-card reveal" data-icon="🌳">
+        <div class="tilt-card-inner">
+          <div class="card-media grad-4"><span class="card-icon">🌳</span></div>
+          <div class="card-body">
+            <h3>Baumpflege</h3>
+            <p>Fachgerechter Schnitt für Wachstum, Sicherheit und Ertrag.</p>
+            <ul>
+              <li>Baumschnitt</li>
+              <li>Pflege von Obstbäumen</li>
+              <li>Entfernen kleiner Äste</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="tilt-card reveal" data-icon="🌷">
+        <div class="tilt-card-inner">
+          <div class="card-media grad-5"><span class="card-icon">🌷</span></div>
+          <div class="card-body">
+            <h3>Gartengestaltung</h3>
+            <p>Individuelle Konzepte, die Ihren Garten neu erblühen lassen.</p>
+            <ul>
+              <li>Beete gestalten</li>
+              <li>Pflanzen</li>
+              <li>Gartenbereiche neu gestalten</li>
+              <li>Individuelle Beratung</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="tilt-card reveal" data-icon="🍂">
+        <div class="tilt-card-inner">
+          <div class="card-media grad-6"><span class="card-icon">🍂</span></div>
+          <div class="card-body">
+            <h3>Saisonservice</h3>
+            <p>Ihr Garten – zu jeder Jahreszeit bestens vorbereitet.</p>
+            <ul>
+              <li>Frühjahrsputz</li>
+              <li>Herbstlaub entfernen</li>
+              <li>Garten winterfest machen</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PAKETE ================= -->
+<section class="section section-alt" id="pakete">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="kicker">Pakete</p>
+      <h2>Das passende Paket für Ihren Garten</h2>
+      <p class="section-sub">Transparent, flexibel und genau auf Ihre Bedürfnisse abgestimmt.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <article class="price-card reveal">
+        <div class="price-icon">🌱</div>
+        <h3>Basis</h3>
+        <p class="price-value"><span class="price-amount">[PREIS EINTRAGEN] €</span><span>/ Einsatz</span></p>
+        <ul class="price-list">
+          <li>Grundlegende Gartenpflege</li>
+          <li>Rasenpflege</li>
+          <li>Unkrautentfernung</li>
+          <li>Kleine Pflegearbeiten</li>
+        </ul>
+        <a href="#termin" class="btn btn-outline">Paket auswählen</a>
+      </article>
+
+      <article class="price-card price-featured reveal">
+        <div class="price-badge">Beliebteste Wahl</div>
+        <div class="price-icon">🌿</div>
+        <h3>Premium</h3>
+        <p class="price-value"><span class="price-amount">[PREIS EINTRAGEN] €</span><span>/ Einsatz</span></p>
+        <ul class="price-list">
+          <li>Alles aus Basis</li>
+          <li>Regelmäßige Gartenpflege</li>
+          <li>Hecken- und Strauchschnitt</li>
+          <li>Saisonale Pflege</li>
+          <li>Persönliche Beratung</li>
+        </ul>
+        <a href="#termin" class="btn btn-primary">Premium wählen</a>
+      </article>
+
+      <article class="price-card reveal">
+        <div class="price-icon">🌳</div>
+        <h3>Komplett</h3>
+        <p class="price-value"><span class="price-amount">[PREIS EINTRAGEN] €</span><span>/ Einsatz</span></p>
+        <ul class="price-list">
+          <li>Komplette Gartenpflege</li>
+          <li>Individuelle Betreuung</li>
+          <li>Gartengestaltung</li>
+          <li>Regelmäßige Pflege</li>
+          <li>Priorisierte Terminvergabe</li>
+        </ul>
+        <a href="#termin" class="btn btn-outline">Komplett auswählen</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VORHER / NACHHER ================= -->
+<section class="section" id="vorher-nachher">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="kicker">Ergebnisse</p>
+      <h2>Vorher. Nachher. Grünblick.</h2>
+      <p class="section-sub">Bewegen Sie den Regler und sehen Sie den Unterschied.</p>
+    </div>
+
+    <div class="ba-grid">
+      <div class="ba-wrap reveal">
+        <h4 class="ba-title">Ungepflegter Garten → Moderner gepflegter Garten</h4>
+        <div class="ba-slider" data-before-label="Vorher" data-after-label="Nachher">
+          <div class="ba-panel ba-after scene-garden-after"></div>
+          <div class="ba-panel ba-before scene-garden-before"></div>
+          <div class="ba-line"></div>
+          <div class="ba-handle" tabindex="0" role="slider" aria-label="Vorher-Nachher Vergleich" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 6L3 12l5 6M16 6l5 6-5 6" stroke="#173a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="ba-tag ba-tag-before">Vorher</span>
+          <span class="ba-tag ba-tag-after">Nachher</span>
+        </div>
+      </div>
+
+      <div class="ba-wrap reveal">
+        <h4 class="ba-title">Überwachsenes Beet → Sauber gestaltetes Blumenbeet</h4>
+        <div class="ba-slider">
+          <div class="ba-panel ba-after scene-bed-after"></div>
+          <div class="ba-panel ba-before scene-bed-before"></div>
+          <div class="ba-line"></div>
+          <div class="ba-handle" tabindex="0" role="slider" aria-label="Vorher-Nachher Vergleich" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 6L3 12l5 6M16 6l5 6-5 6" stroke="#173a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="ba-tag ba-tag-before">Vorher</span>
+          <span class="ba-tag ba-tag-after">Nachher</span>
+        </div>
+      </div>
+
+      <div class="ba-wrap reveal">
+        <h4 class="ba-title">Hoher ungepflegter Rasen → Perfekt gepflegter Rasen</h4>
+        <div class="ba-slider">
+          <div class="ba-panel ba-after scene-lawn-after"></div>
+          <div class="ba-panel ba-before scene-lawn-before"></div>
+          <div class="ba-line"></div>
+          <div class="ba-handle" tabindex="0" role="slider" aria-label="Vorher-Nachher Vergleich" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 6L3 12l5 6M16 6l5 6-5 6" stroke="#173a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="ba-tag ba-tag-before">Vorher</span>
+          <span class="ba-tag ba-tag-after">Nachher</span>
+        </div>
+      </div>
+
+      <div class="ba-wrap reveal">
+        <h4 class="ba-title">Ungepflegte Hecke → Professionell geschnittene Hecke</h4>
+        <div class="ba-slider">
+          <div class="ba-panel ba-after scene-hedge-after"></div>
+          <div class="ba-panel ba-before scene-hedge-before"></div>
+          <div class="ba-line"></div>
+          <div class="ba-handle" tabindex="0" role="slider" aria-label="Vorher-Nachher Vergleich" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 6L3 12l5 6M16 6l5 6-5 6" stroke="#173a24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="ba-tag ba-tag-before">Vorher</span>
+          <span class="ba-tag ba-tag-after">Nachher</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ÜBER UNS ================= -->
+<section class="section section-alt" id="ueber-uns">
+  <div class="container about-grid">
+    <div class="about-media reveal">
+      <div class="about-photo">
+        <div class="floaty about-leaf about-leaf-1">🌿</div>
+        <div class="floaty about-leaf about-leaf-2">🍃</div>
+        <div class="about-photo-inner">🌳🌷🌿</div>
+      </div>
+      <div class="about-stat glass">
+        <strong>10+</strong>
+        <span>Jahre Erfahrung</span>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <p class="kicker">Über uns</p>
+      <h2>Mit Leidenschaft für Ihren Garten</h2>
+      <p>Bei Grünblick dreht sich alles um gepflegte, schöne und lebendige Außenbereiche. Mit Leidenschaft, Erfahrung und einem Blick fürs Detail kümmern wir uns darum, dass Ihr Garten zu einem Ort wird, an dem Sie sich wohlfühlen.</p>
+      <div class="about-points">
+        <div class="about-point"><span>✓</span>Erfahrenes &amp; zuverlässiges Team</div>
+        <div class="about-point"><span>✓</span>Individuelle Beratung vor Ort</div>
+        <div class="about-point"><span>✓</span>Nachhaltige &amp; schonende Pflege</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TERMIN ================= -->
+<section class="section" id="termin">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="kicker">Terminbuchung</p>
+      <h2>Termin vereinbaren</h2>
+      <p class="section-sub">Wählen Sie einfach Ihren Wunschtermin und wir kümmern uns um den Rest.</p>
+    </div>
+
+    <div class="booking glass reveal" id="booking">
+
+      <div class="booking-steps" aria-hidden="true">
+        <div class="b-step active" data-step="1"><span>1</span>Datum</div>
+        <div class="b-step" data-step="2"><span>2</span>Uhrzeit</div>
+        <div class="b-step" data-step="3"><span>3</span>Service</div>
+        <div class="b-step" data-step="4"><span>4</span>Kontakt</div>
+      </div>
+
+      <form id="bookingForm" novalidate>
+
+        <!-- Step 1: Datum -->
+        <div class="b-panel active" data-panel="1">
+          <h3>Wählen Sie ein Datum</h3>
+          <div class="calendar" id="calendar">
+            <div class="cal-head">
+              <button type="button" class="cal-nav" id="calPrev" aria-label="Vorheriger Monat">‹</button>
+              <span id="calMonthLabel"></span>
+              <button type="button" class="cal-nav" id="calNext" aria-label="Nächster Monat">›</button>
+            </div>
+            <div class="cal-weekdays">
+              <span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span><span>Sa</span><span>So</span>
+            </div>
+            <div class="cal-grid" id="calGrid"></div>
+          </div>
+          <div class="b-actions">
+            <span class="b-hint" id="dateHint">Bitte wählen Sie ein Datum</span>
+            <button type="button" class="btn btn-primary" id="toStep2" disabled>Weiter</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Uhrzeit -->
+        <div class="b-panel" data-panel="2">
+          <h3>Wählen Sie eine Uhrzeit</h3>
+          <div class="time-grid" id="timeGrid">
+            <button type="button" class="time-chip" data-time="09:00 Uhr">09:00 Uhr</button>
+            <button type="button" class="time-chip" data-time="11:00 Uhr">11:00 Uhr</button>
+            <button type="button" class="time-chip" data-time="13:00 Uhr">13:00 Uhr</button>
+            <button type="button" class="time-chip" data-time="15:00 Uhr">15:00 Uhr</button>
+            <button type="button" class="time-chip" data-time="17:00 Uhr">17:00 Uhr</button>
+          </div>
+          <div class="b-actions">
+            <button type="button" class="btn btn-text" data-back="1">Zurück</button>
+            <button type="button" class="btn btn-primary" id="toStep3" disabled>Weiter</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Service -->
+        <div class="b-panel" data-panel="3">
+          <h3>Welchen Service benötigen Sie?</h3>
+          <div class="field">
+            <label for="serviceSelect">Service</label>
+            <select id="serviceSelect" required>
+              <option value="" disabled selected>Bitte auswählen…</option>
+              <option>Gartenpflege</option>
+              <option>Rasenpflege</option>
+              <option>Heckenschnitt</option>
+              <option>Baumpflege</option>
+              <option>Gartengestaltung</option>
+              <option>Beratung</option>
+              <option>Sonstiges</option>
+            </select>
+          </div>
+          <div class="b-actions">
+            <button type="button" class="btn btn-text" data-back="2">Zurück</button>
+            <button type="button" class="btn btn-primary" id="toStep4" disabled>Weiter</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Kontakt -->
+        <div class="b-panel" data-panel="4">
+          <h3>Ihre Kontaktdaten</h3>
+          <div class="field-grid">
+            <div class="field">
+              <label for="bVorname">Vorname</label>
+              <input type="text" id="bVorname" required>
+            </div>
+            <div class="field">
+              <label for="bNachname">Nachname</label>
+              <input type="text" id="bNachname" required>
+            </div>
+            <div class="field">
+              <label for="bTelefon">Telefonnummer</label>
+              <input type="tel" id="bTelefon" required>
+            </div>
+            <div class="field">
+              <label for="bEmail">E-Mail-Adresse</label>
+              <input type="email" id="bEmail" required>
+            </div>
+            <div class="field field-full">
+              <label for="bAdresse">Adresse</label>
+              <input type="text" id="bAdresse" required>
+            </div>
+            <div class="field field-full">
+              <label for="bNachricht">Nachricht (optional)</label>
+              <textarea id="bNachricht" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="booking-summary" id="bookingSummary"></div>
+          <div class="b-actions">
+            <button type="button" class="btn btn-text" data-back="3">Zurück</button>
+            <button type="submit" class="btn btn-primary">Termin anfragen</button>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- Success -->
+      <div class="b-success" id="bSuccess">
+        <div class="success-check">
+          <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="M14 27l7 7 17-17"/></svg>
+        </div>
+        <h3>Vielen Dank für Ihre Anfrage!</h3>
+        <p>Wir melden uns schnellstmöglich bei Ihnen.</p>
+        <button type="button" class="btn btn-outline" id="bReset">Neue Anfrage stellen</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= KONTAKT ================= -->
+<section class="section section-alt" id="kontakt">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="kicker">Kontakt</p>
+      <h2>Kontaktieren Sie Grünblick</h2>
+      <p class="section-sub">Wir freuen uns auf Ihre Nachricht.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item glass">
+          <span class="contact-icon">📞</span>
+          <div><strong>Telefon</strong><p>[TELEFONNUMMER]</p></div>
+        </div>
+        <div class="contact-item glass">
+          <span class="contact-icon">✉️</span>
+          <div><strong>E-Mail</strong><p>[E-MAIL-ADRESSE]</p></div>
+        </div>
+        <div class="contact-item glass">
+          <span class="contact-icon">📍</span>
+          <div><strong>Adresse</strong><p>[ADRESSE]</p></div>
+        </div>
+        <div class="contact-item glass">
+          <span class="contact-icon">🕒</span>
+          <div><strong>Öffnungszeiten</strong><p>Montag – Freitag: [UHRZEIT]</p></div>
+        </div>
+
+        <div class="map-placeholder glass">
+          <div class="map-grid"></div>
+          <span class="map-pin">📍</span>
+          <span class="map-label">Standort auf Karte (Platzhalter)</span>
+        </div>
+      </div>
+
+      <form class="contact-form glass reveal" id="contactForm">
+        <div class="field">
+          <label for="cName">Name</label>
+          <input type="text" id="cName" required>
+        </div>
+        <div class="field">
+          <label for="cEmail">E-Mail</label>
+          <input type="email" id="cEmail" required>
+        </div>
+        <div class="field">
+          <label for="cPhone">Telefonnummer</label>
+          <input type="tel" id="cPhone">
+        </div>
+        <div class="field">
+          <label for="cMsg">Nachricht</label>
+          <textarea id="cMsg" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Nachricht senden</button>
+        <p class="form-success" id="contactSuccess">Danke! Ihre Nachricht wurde übermittelt.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#start" class="logo">
+        <svg width="34" height="34" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32 6C18 6 8 18 8 32c0 3 .4 5.8 1.1 8.4C13 34 20 28 32 28c-10 4-16 11-19.6 18.6C16.4 54.7 23.6 58 32 58c14.9 0 27-11.6 27-27C59 17.5 47.4 6 32 6Z" fill="url(#leafGrad2)"/>
+          <circle cx="41" cy="21" r="4.4" fill="#0e2417"/>
+          <circle cx="42.3" cy="19.7" r="1.4" fill="#eafff0"/>
+          <defs><linearGradient id="leafGrad2" x1="8" y1="6" x2="59" y2="58" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8fd694"/><stop offset="1" stop-color="#3c7a4e"/></linearGradient></defs>
+        </svg>
+        <span class="logo-text">Grünblick</span>
+      </a>
+      <p>Ihr Partner für einen gepflegten und schönen Garten.</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="Pinterest">PI</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="#start">Start</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#pakete">Pakete</a>
+      <a href="#vorher-nachher">Vorher / Nachher</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <span>[TELEFONNUMMER]</span>
+      <span>[E-MAIL-ADRESSE]</span>
+      <span>[ADRESSE]</span>
+    </div>
+
+    <div class="footer-col">
+      <h4>Rechtliches</h4>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Grünblick – Alle Rechte vorbehalten.</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
