@@ -216,7 +216,7 @@ h1,h2,h3,h4{font-family:var(--font-head);color:var(--dark-green);line-height:1.1
 .hero-sub{font-size:clamp(1.05rem,2vw,1.3rem);max-width:640px;margin:0 auto 2.2rem;color:rgba(255,255,255,.92)}
 .hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
-#heroContent{will-change:transform,opacity,filter;transition:opacity .25s linear, transform .25s linear, filter .25s linear}
+#heroContent{will-change:transform,opacity;transition:opacity .25s linear, transform .25s linear}
 
 .scroll-cue{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2}
 .scroll-cue span{

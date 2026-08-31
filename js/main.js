@@ -7,7 +7,6 @@
 
   /* Blur ist auf kleinen/schwächeren Geräten teurer zu rendern -> dezenter dosieren */
   var REVEAL_BLUR_MAX = isSmallScreen ? 8 : 13;
-  var HERO_BLUR_MAX = isSmallScreen ? 6 : 10;
 
   /* ---------------- NAV ---------------- */
   var nav = document.getElementById('nav');
@@ -51,7 +50,6 @@
     var scale = 0.96 + 0.04 * eased;
     heroContent.style.opacity = eased;
     heroContent.style.transform = 'translateY(' + translate + 'px) scale(' + scale + ')';
-    heroContent.style.filter = 'blur(' + (HERO_BLUR_MAX * (1 - eased)) + 'px)';
   }
   if (reduceMotion){
     heroContent.style.opacity = 1;
