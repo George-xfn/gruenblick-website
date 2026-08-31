@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gruenwerk-aachen.onrender.com/sitemap.xml
+Sitemap: https://gruenblick-website.onrender.com/sitemap.xml
