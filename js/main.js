@@ -3,6 +3,11 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var canHover = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  var isSmallScreen = window.matchMedia('(max-width: 640px)').matches;
+
+  /* Blur ist auf kleinen/schwächeren Geräten teurer zu rendern -> dezenter dosieren */
+  var REVEAL_BLUR_MAX = isSmallScreen ? 8 : 13;
+  var HERO_BLUR_MAX = isSmallScreen ? 6 : 10;
 
   /* ---------------- NAV ---------------- */
   var nav = document.getElementById('nav');
@@ -46,6 +51,7 @@
     var scale = 0.96 + 0.04 * eased;
     heroContent.style.opacity = eased;
     heroContent.style.transform = 'translateY(' + translate + 'px) scale(' + scale + ')';
+    heroContent.style.filter = 'blur(' + (HERO_BLUR_MAX * (1 - eased)) + 'px)';
   }
   if (reduceMotion){
     heroContent.style.opacity = 1;
@@ -85,8 +91,8 @@
 
   function updateReveals(){
     var vh = window.innerHeight;
-    var startLine = vh * 0.94;
-    var endLine = vh * 0.5;
+    var startLine = vh * 0.96;
+    var endLine = vh * 0.42;
     revealEls.forEach(function(el){
       if (el._settled) return;
       var top = el.getBoundingClientRect().top + el._revealOffset;
@@ -102,9 +108,12 @@
         el.style.filter = '';
         return;
       }
-      el.style.opacity = eased;
-      el.style.transform = 'translateY(' + (26 * (1 - eased)) + 'px) scale(' + (0.985 + 0.015 * eased) + ')';
-      el.style.filter = 'blur(' + (6 * (1 - eased)) + 'px)';
+      var opacity = 0.15 + 0.85 * eased;
+      var translate = 28 * (1 - eased);
+      var scale = 0.96 + 0.04 * eased;
+      el.style.opacity = opacity;
+      el.style.transform = 'translateY(' + translate + 'px) scale(' + scale + ')';
+      el.style.filter = 'blur(' + (REVEAL_BLUR_MAX * (1 - eased)) + 'px)';
     });
   }
 
